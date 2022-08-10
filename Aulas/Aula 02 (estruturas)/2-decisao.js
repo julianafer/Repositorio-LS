@@ -1,3 +1,6 @@
+
+// base das estruturas de repetição
+
 let operator = '-'
 let number1 = 7
 let number2 = 3
@@ -16,22 +19,28 @@ switch (operator) {
 console.log(result)
 
 
-// function calcularMediaIf(nota1, nota2, nota3) {
-//     const media = (nota1 + nota2 + nota3) / 3
 
-//     if (media >= 70) {
-//         return 'Aprovado'
-//     } else if (media >= 40) {
-//         return 'Final'
-//     } else {
-//         return 'Reprovado'
-//     }
-// }
+// cálculo de média usando if
 
-// console.log(calcularMediaIf(70,70,70))
-// console.log(calcularMediaIf(40,40,40))
-// console.log(calcularMediaIf(30,30,30))
+function calcularMediaIf(nota1, nota2, nota3) {
+    const media = (nota1 + nota2 + nota3) / 3
 
+    if (media >= 70) {
+        return 'Aprovado'
+    } else if (media >= 40) {
+        return 'Final'
+    } else {
+        return 'Reprovado'
+    }
+}
+
+console.log(calcularMediaIf(70,70,70))
+console.log(calcularMediaIf(40,40,40))
+console.log(calcularMediaIf(30,30,30))
+
+
+
+// cálculo de média usando switch
 
 function calcularMediaSwitch(nota1, nota2, nota3) {
     const media = (nota1 + nota2 + nota3) / 3
