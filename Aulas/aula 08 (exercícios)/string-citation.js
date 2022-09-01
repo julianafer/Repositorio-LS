@@ -38,5 +38,5 @@ function citation(nome, tipo) {
     }
 }
 
-console.log(citation('Luiz Carlos Rodrigues Chaves', 'normal'))
-console.log(citation('Luiz Carlos Rodrigues Chaves', 'compacto'))
+console.log(citation('juliana ferreira cavalcante', 'normal'))
+console.log(citation('juliana ferreira cavalcante', 'compacto'))

@@ -1,10 +1,15 @@
-let letras = 'abcdefghijklmnopqrstuvwxyz'
-
 function cipher(letters, number) {
+
+    let letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     let new_letters = ''
-    letters_split = letters.split('')
-    index = letras.search(letters_split[0])
-    new_letters += letras[index+number]
+    let letters_split = letters.split('')
+
+    for (let i = 0; i < letters.length; i++) {
+        const index = letras.findIndex((v) => v === letters_split[i])
+        const newIndex = (index + number) % 26
+        new_letters += letras[newIndex]
+    }
+
     return new_letters
 }
 
