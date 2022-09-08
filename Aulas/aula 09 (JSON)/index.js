@@ -1,76 +1,106 @@
-let disciplina = 
-[
+let disciplinas = [
   {
-  nome: "ED",
-  ano: 2022
+    "nome": "ED",
+    "ano": 2022
   },
   {
-  nome: "LS",
-  ano: 2022,
-  },
+    "nome": "LS",
+    "ano": 2022
+  }
 ];
 
-console.log(disciplina);
-
-disciplina.curso = "TSi";
-
-console.log(disciplina[1]);
-
 disciplinas = {
-    20: {
-      "nome": 'LS',
-      "ano": 2022
-    },
-    10: {
-      "nome": 'ED',
-      "ano": 2022
-    },
-    TSI2010: {
-      "nome": 'WEB I',
-      "ano": 2022
-    },
-    'prop composta': {
-      "nome": 'WEB II',
-      "ano": 2022
-    }
+  20: {
+    "nome": "LS",
+    "ano": 2022
+  },
+
+  10: {
+    "nome": "ED",
+    "ano": 2022
+  },
+
+  TSI2010: {
+    "nome": "WEB I",
+    "ano": 2022
+  },
+
+  'prop composta': {
+    "nome": "WEB II",
+    "ano": 2022
   }
 
-// Objeto Javascript
-let livro = {
-  titulo: "Js na prática",
-  paginas: 530,
-  ano:2019
 }
+
+// console.log(disciplinas[10].nome);
+
+// console.log(disciplinas.TSI2010);
+
+// console.log(disciplinas['prop composta'].nome);
+
+// ------------------- //
+// JSON
+// JavaScript Object Notation
+let livro = {
+  titulo: "JS na prática!",
+  paginas: 530,
+  ano: 2019
+}
+
 // console.log(JSON.stringify(livro));
 
-//Propriedade Json = Se difere do objeto, pois é totalmente uma string
-let livroJson = `{
-  "titulo": "Js na prática",
+let ano = 2019;
+let livroJSON = `{  
+  "nome": "JS na prática!",
   "paginas": 530,
-  "ano": 2019,
+  "ano": ${ano},
   "esgotado": true,
-  "editora": {
-    "nome": "redimir",
-  },
+  "editora": { "nome": "IFPB", "cidade": "João Pessoa"},
+  "data": "2022-01-01"
 }`;
 
-console.log(livroJson)
+let objLivro = JSON.parse(livroJSON);
 
+// console.log(objLivro.editora.nome);
+// console.log( new Date(objLivro.data) );
 
-let objLivro = JSON.parse(livroJson);
+// console.log(livro);
 
-// console.log(objLivro.ano)
+// livro.editora = "IFPB";
 
-const ip = {
-    address: '192.168.0.75',
-    mask: '255.255.255.254'
-  }
-  
-  console.log(ip);
-  
-  ip.version = 'v4'
-  console.log(ip)
-  
-  delete ip.version;
-  console.log(ip)
-  
+let livroNovo = {...livro, editora: "IFPB", titulo: "Novo livro"};
+livro.ano = 2020;
+
+// console.log( livroNovo );
+// console.log( livro );
+
+const titulo = "JS na prática!";
+ano = 2019;
+const paginas = 530;
+
+const novoLivroJS = {titulo, ano, paginas};
+// console.log(novoLivroJS);
+
+// ---------------------------
+const ips = [
+  { address: '192.168.0.2', mask: '255.255.255.0' },
+  { address: '192.168.0.10', mask: '255.255.255.0' },
+  { address: '192.168.0.26', mask: '255.255.255.0' },
+];
+
+for (const ip of ips) {
+  // console.log(ip.address + '/' + ip.mask);
+}
+
+// console.log(JSON.stringify(ips));
+
+// ------------------
+const ipsNovos = {
+  database: { address: '192.168.0.2', mask: '255.255.255.0' },
+  dns: { address: '192.168.0.10', mask: '255.255.255.0' },
+  http: { address: '192.168.0.26', mask: '255.255.255.0' },
+};
+
+for (const host in ipsNovos) {
+  console.log(ipsNovos[host].address + '/' + ipsNovos[host].mask);
+}
