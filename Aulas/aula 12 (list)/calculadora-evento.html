@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora Gráfica</h1>
+        <input id="number1" type="number" />
+        <input id="number2" type="number" />
+        <button id="add" onclick="sum()">+</button>
+        <button id="sub" type="button" onclick="subtract()">-</button>
+        <p id="ans"></p>
+    </div>
+
+    <script>
+        function sum() {
+            let but = document.getElementById("add")
+            let n1 = Number(document.getElementById("number1").value)
+            let n2 = Number(document.getElementById("number2").value)
+            let ans = document.getElementById("ans")
+
+            ans.innerHTML = `${n1} + ${n2} = ${n1+n2}`
+        }
+
+        function subtract() {
+            let but = document.getElementById("add")
+            let n1 = Number(document.getElementById("number1").value)
+            let n2 = Number(document.getElementById("number2").value)
+            let ans = document.getElementById("ans")
+
+            ans.innerHTML = `${n1} + ${n2} = ${n1-n2}`
+        }
+    </script>
+</body>
+</html>
