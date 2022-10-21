@@ -5,6 +5,11 @@
 }
 
 .div-principal {
-    margin: 35%;
-    margin-top: 10%;
+    margin: 10% 35%;
+}
+
+p {
+    display: none;
+    color: red;
+    font-weight: bold;
 }

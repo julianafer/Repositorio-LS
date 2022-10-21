@@ -14,9 +14,10 @@
     <div class="div-principal">
         <h1 class="text-center mb-4 fw-bold">Adress</h1>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="cep" id="cep" placeholder="Cep" onchange="searchCep(document.getElementById('cep').value)">
+            <input type="text" class="form-control" name="cep" id="cep" placeholder="Cep" onchange="searchCep()">
             <label for="cep">CEP</label>
         </div>
+        <p id='error'>CEP inválido!</p>
         <div class="form-floating">
             <input disable type="text" class="form-control" name="street" id="street" placeholder="Rua">
             <label for="street">Rua</label>
