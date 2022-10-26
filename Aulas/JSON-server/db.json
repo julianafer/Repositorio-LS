@@ -1,0 +1,12 @@
+{
+    "investments": [
+        {
+            "id": 1,
+            "name": "Banco Inter",
+        },
+        {
+            "id": 2,
+            "name": "BTG Pactual"
+        }
+    ]
+}
